@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TODOLIST</title>
+    <link rel = "stylesheet" href ="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body> 
+    <div id = "app"> 
+        <nav class = "list-one">
+            <p>Urgent tasks</p>
+            <ul >
+                <li class = "item-style" v-for = "element in urgList">{{element.text}}</li> 
+            </ul>
+            <button class = "btn" @click="transferToWait">transfer</button>
+        </nav>
+        <nav class = "list-two">
+            <p>Not urgent tasks</p>
+            <ul >
+                <li class = "item-style" v-for = "element in waitList">{{element.text}}</li> 
+            </ul>
+            <button class = "btn" @click = "transferToUrgent">transfer</button>
+        </nav>
+    </div>
+    <script src = "main.js"></script>
+    
+</body>
+</html>
